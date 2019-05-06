@@ -7,10 +7,18 @@ namespace World.Controllers
 {
   public class CountryController : Controller
   {
-    [HttpGet("/countries")]
+    [HttpGet("/")]
     public ActionResult Index()
     {
       return View(Country.GetAll());
+    }
+
+    [HttpGet("/countries/{continent}")]
+    public ActionResult Show(string continent)
+    {
+      // List<Country> searchContinent = Country.FindContinent();
+      return View(Country.FindContinent(continent));
+      // return View(continent);
     }
 
   }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace World.Models
 {
@@ -8,13 +9,15 @@ namespace World.Models
     public string Name {get;}
     public string Code {get;}
     public int Population {get;}
+    public string Continent {get;}
 
 
-    public Country (string name, string code, int population)
+    public Country (string name, string code, int population, string continent)
     {
       Name = name;
       Code = code;
       Population = population;
+      Continent = continent;
 
     }
     public static List<Country> GetAll()
@@ -29,11 +32,12 @@ namespace World.Models
       while(rdr.Read())
       {
         string countryName = rdr.GetString(1);
-            string countryCode = rdr.GetString(0);
+        string countryCode = rdr.GetString(0);
         int countryPopulation = rdr.GetInt32(6);
+        string countryContinent = rdr.GetString(2);
 
 
-        Country newCountry = new Country(countryName, countryCode, countryPopulation);
+        Country newCountry = new Country(countryName, countryCode, countryPopulation, countryContinent);
         allCountries.Add(newCountry);
       }
       conn.Close();
@@ -42,6 +46,25 @@ namespace World.Models
         conn.Dispose();
       }
       return allCountries;
+    }
+
+    public static List<Country> FindContinent(string searchContinent)
+    {
+      List<Country> countryList = GetAll();
+
+      List<Country> matchedCountries = new List<Country>{};
+      Console.WriteLine("Djubuti");
+      foreach (var country in countryList)
+      {
+        Console.WriteLine(country.Name);
+        if (country.Continent == searchContinent)
+        {
+          Console.WriteLine(country.Name);
+          Console.WriteLine("Djubuti");
+          matchedCountries.Add(country);
+        }
+      }
+      return matchedCountries;
     }
 
   }

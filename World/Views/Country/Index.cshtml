@@ -1,8 +1,33 @@
-<h1>The World App</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Word Counter</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
 
-<ul>
-@foreach (var country in Model)
-{
-  <li>@country.Name</li>
-}
-</ul>
+  <body>
+    <h1>The World App</h1>
+
+    <form action ='/countries/show' method='post' class="form-inline">
+      <select class="form-control">
+        <option>North America</option>
+        <option>South America</option>
+        <option>Asia</option>
+        <option>Europe</option>
+        <option>Africa</option>
+        <option>Oceania</option>
+        <option>Antarctica</option>
+      </select>
+      <button type="submit" name="button">GO!</button>
+    </form>
+
+    <ul>
+    @foreach (var country in Model)
+    {
+      <li>@country.Name</li>
+    }
+    </ul>
+  </body>
+</html>

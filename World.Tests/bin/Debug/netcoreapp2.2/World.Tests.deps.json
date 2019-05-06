@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "a9545b79b41ea3442ba997c2a44c541f134cb10e"
+    "signature": "1a63b39b4555ba7f29a50848f17555ca47edd973"
   },
   "compilationOptions": {},
   "targets": {
@@ -1131,11 +1131,11 @@
           }
         }
       },
-      "MySqlConnector/0.47.1": {
+      "MySqlConnector/0.53.0": {
         "runtime": {
           "lib/netcoreapp2.1/MySqlConnector.dll": {
-            "assemblyVersion": "0.47.1.0",
-            "fileVersion": "0.47.1.0"
+            "assemblyVersion": "0.53.0.0",
+            "fileVersion": "0.53.0.0"
           }
         }
       },
@@ -2246,7 +2246,7 @@
       "World/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc": "2.2.0",
-          "MySqlConnector": "0.47.1"
+          "MySqlConnector": "0.53.0"
         },
         "runtime": {
           "World.dll": {}
@@ -2764,12 +2764,12 @@
       "path": "mstest.testframework/1.3.2",
       "hashPath": "mstest.testframework.1.3.2.nupkg.sha512"
     },
-    "MySqlConnector/0.47.1": {
+    "MySqlConnector/0.53.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xaguKNuiYX34PYnvxJ+ATr6SoNjbJZqWclqsmqsqdNg68sdjqHP8PPp8IOpuiD/ai0S64dUth3//c7XaArZQQg==",
-      "path": "mysqlconnector/0.47.1",
-      "hashPath": "mysqlconnector.0.47.1.nupkg.sha512"
+      "sha512": "sha512-4jP7FFwcjNLoGD67jVQVUjBIPEXNZ8IW5fQEFhjoPHi+7xuJyUDXOBvBix+HrfeJy6T+Wc5NVQJwgUUuBeljNA==",
+      "path": "mysqlconnector/0.53.0",
+      "hashPath": "mysqlconnector.0.53.0.nupkg.sha512"
     },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",
